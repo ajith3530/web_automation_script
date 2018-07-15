@@ -11,7 +11,13 @@ for y in range(columns):                            #for loop to access the firs
     if worksheet.cell(0,y).value=="Market":
         column_num=y
 for x in range(rows):
-    row_data.append(worksheet.cell(x,column_num).value)
+    column_data.append(worksheet.cell(x,column_num).value)
+
+for y in range(columns):
+     var=str(worksheet.cell(1,y).value)
+     if var.isalnum()==True:
+         print(var)     
+
 print(row_data)
 print(column_data)
 #Pranav Code
